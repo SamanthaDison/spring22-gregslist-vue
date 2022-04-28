@@ -19,7 +19,7 @@ import { Car } from "../models/Car";
 export default {
   // NOTE this is telling the child component that it will be taking in data as a prop from the parent - 'parameter'
   props: {
-    car: {
+    cars: {
       type: Car,
       required: true,
     },

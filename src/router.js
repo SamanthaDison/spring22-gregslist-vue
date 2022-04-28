@@ -19,7 +19,7 @@ const routes = [
   },
   // NOTE the :id is going to make it so that the url as the id of the car we are going to so that we can access it when we need it
   {
-    path: '/cars/:id',
+    path: '/cars:/id',
     name: 'CarDetailsPage',
     component: loadPage('CarDetailsPage')
   },

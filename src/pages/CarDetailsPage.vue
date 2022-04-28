@@ -61,7 +61,7 @@ export default {
     onMounted(async () => {
       try {
         AppState.car = null;
-        await carsService.getCarById(route.params.id);
+        await carsService.getCarById(router.params.id);
       } catch (error) {
         logger.error(error);
         Pop.toast(error.message, "error");

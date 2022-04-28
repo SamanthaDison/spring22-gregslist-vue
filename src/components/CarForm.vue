@@ -83,7 +83,6 @@ import { ref } from "@vue/reactivity";
 import { logger } from "../utils/Logger";
 import Pop from "../utils/Pop";
 import { carsService } from "../services/CarsService";
-import { Modal } from "bootstrap";
 import { Car } from "../models/Car";
 import { watchEffect } from "@vue/runtime-core";
 import { useRouter } from "vue-router";
@@ -115,7 +114,7 @@ export default {
               document.getElementById("edit-car-modal")
             ).toggle();
           } else {
-            const createdCar = await carsService.createCar(editable.value);
+            const createdCar = await carsService.createCar(editable);
             // NOTE push the user to the car details page of the car that was just created
             router.push({
               name: "CarDetailsPage",

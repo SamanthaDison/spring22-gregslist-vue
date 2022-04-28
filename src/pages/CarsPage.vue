@@ -4,13 +4,13 @@
       <div class="col-2"></div>
     </div>
     <div class="row p-2">
-      <Car v-for="c in cars" :key="c.id" :car="c" />
+      <Car v-for="c in cars" :key="c.Id" :car="c" />
       <!-- Inject car component -->
     </div>
   </div>
 
   <!-- Create Car Modal -->
-  <Modal id="create-car-modal">
+  <Modal id="create-car-model">
     <template #modal-title-slot>
       <h3>Create a Car!</h3>
     </template>
@@ -22,7 +22,7 @@
 
 
 <script>
-import { computed, onMounted } from "@vue/runtime-core";
+import { onMounted } from "@vue/runtime-core";
 import { carsService } from "../services/CarsService";
 import { logger } from "../utils/Logger";
 import Pop from "../utils/Pop";

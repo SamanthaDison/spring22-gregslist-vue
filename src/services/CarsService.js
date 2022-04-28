@@ -7,11 +7,11 @@ import { api } from "./AxiosService"
 class CarsService {
   async getCars() {
     const res = await api.get('api/cars')
-    AppState.cars = res.data.map(c => new Car(c))
+    AppState.car = res.data.map(c => new Car(c))
   }
 
   async getCarById(carId) {
-    const res = await api.get('api/cars/' + carId)
+    const res = await api.get('api/cars' + carId)
     AppState.car = new Car(res.data)
   }
 
